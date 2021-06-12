@@ -12,6 +12,7 @@ using Microsoft.Azure.Documents;
 using System.Linq;
 using Microsoft.Azure.WebJobs.Host;
 
+//Azure Function app code to get the documents from the Cosmos DB
 namespace cosdbselect
 {
     public static class Function1
@@ -33,7 +34,7 @@ namespace cosdbselect
             //if we need to apply any filter on the returned records
             var result = sstat.Where(s => s.id == "1");*/
 
-            //return the result object
+            //return the result object 
             return new OkObjectResult(sstat);
          }
 
