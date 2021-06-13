@@ -12,10 +12,10 @@ using Microsoft.Azure.Documents;
 using System.Linq;
 using Microsoft.Azure.WebJobs.Host;
 
-//Azure Function app code to get the documents from the Cosmos DB
+//Azure Function app code to get all the documents from the Cosmos DB
 namespace cosdbselect
 {
-    public static class Function1
+    public static class GetServerStat
     {
         //Get server status
         [FunctionName("getServerstats")]
@@ -42,10 +42,10 @@ namespace cosdbselect
         public class ServerStatus
          {
             public string id;
-            public string servername;
-            public string serverstatus;
-            public string lastcheck;
-            public string lesatchecktime;
+            public string Server;
+            public string Status;
+            public string CheckDate;
+            public string Checktime;
         }
 
     }
